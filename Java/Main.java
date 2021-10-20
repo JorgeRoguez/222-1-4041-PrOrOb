@@ -11,3 +11,6 @@
         
     }
  }
+
+ Human jrg = Object Human = new Object("Jorge");
+ 
