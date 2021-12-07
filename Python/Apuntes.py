@@ -39,11 +39,11 @@ class Basic_Student(Student):
         super().__init__(first_name, last_name, nick_name)
         self.age = age
     
-    def student_file(self, gender, nationality):
-        return "Genero: "+gender+" y de nacionalidad: "+nationality
+    def student_file(self, gender, nationality, color_hair):
+        return "Genero: "+gender+", de nacionalidad: "+nationality+" y color de cabello "+color_hair
     
     
 
 obj_basic = Basic_Student("Bruno", "Roguez", "el zurdo", "20")
 print(obj_basic.first_name+" "+obj_basic.last_name+", "+obj_basic.nick_name+" de "+obj_basic.age+" años")
-print(obj_basic.student_file("masculino", "mexicana"))
+print(obj_basic.student_file("masculino", "mexicana", "negro"))
