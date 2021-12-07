@@ -1,26 +1,30 @@
-class computer:
+class Computer:
 
-    def __init__(self, id, cpu, keyboard, mouse):
+    def __init__(self, id, cpu, keyboard, mouse, os):
         self.id = id
         self.cpu = cpu
         self.keyboard = keyboard
         self.mouse = mouse
-
-    class cpu:
-        def __init__(self, id_cpu, marca_cpu, modelo_cpu, memoria_cpu):
-            self.id_cpu = id_cpu
-            
-
-    class keyboard:
-        def __init__(self, id_keyboard, marca_keyboard, modelo_keyboard):
-            self.id_keyboard = id_keyboard
-            self.marca_keyboard = marca_keyboard
-            self.modelo_keyboard = modelo_keyboard
+        self.os = os
     
-    class mouse:
-        def __init__(self, id_mouse, marca_mouse, modelo_mouse, tipo_mouse):
-            self.id_mouse = id_mouse
-            self.marca_mouse = marca_mouse
+    def get_id(self):
+        return self.id
+    def get_cpu(self):
+        return self.cpu
+    def get_keyboard(self):
+        return self.keyboard
+    def get_mouse(self):
+        return self.mouse
+    def get_os(self):
+        return self.os
     
-nuevo_teclado = computer.keyboard("T123", "Perfect Choice", "Tcl456")
-print (nuevo_teclado.id_keyboard)
+    def show_computer(self):
+        print("\nId: "+self.get_id()+"\nCpu: "+self.get_cpu()+"\nKeyboard: "+self.get_keyboard()+"\nMouse: "+self.get_mouse()+"\nOS "+self.get_os())
+
+id = input("Favor de ingresar id: ")
+cpu = input("Favor de ingresar cpu: ")
+keyboard = input("Favor de ingresar keyboard: ")
+mouse = input("Favor de ingresar mouse: ")
+os = input("Favor de ingresar os: ")
+new_computer = Computer(id, cpu, keyboard, mouse, os)
+new_computer.show_computer()
